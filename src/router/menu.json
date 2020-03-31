@@ -1,0 +1,355 @@
+[
+  {
+    "path": "/login",
+    "name": "login",
+    "title": "登录",
+    "redirect": "login/login",
+    "children": [
+      {
+        "path": "login",
+        "title": "登录",
+        "name": "login",
+        "component": "login/login"
+      }
+    ]
+  },
+  {
+    "path": "/",
+    "redirect": "/home",
+    "name": "home",
+    "title": "首页",
+    "hidden": true,
+    "children": [
+      {
+        "path": "home",
+        "title": "首页",
+        "name": "home_index",
+        "component": "home/home"
+      }
+    ]
+  },
+  {
+    "path": "/product",
+    "icon": "speedometer",
+    "name": "productList",
+    "title": "商品管理",
+    "redirect": "product/list",
+    "meta":{
+      "keepAlive": true,
+      "isBack": true
+    },
+    "children": [
+      {
+        "path": "/product/list",
+        "icon": "speedometer",
+        "title": "商品列表",
+        "name": "productList",
+        "component": "product/list",
+        "meta":{
+          "keepAlive": true,
+          "isBack": true
+        }
+      },
+      {
+        "path": "/product/visitManage",
+        "icon": "speedometer",
+        "title": "商品访问管理",
+        "name": "productVisitManage",
+        "component": "product/visit"
+      }
+    ]
+  },
+  {
+    "path": "/customer",
+    "icon": "key",
+    "name": "list",
+    "title": "客户管理",
+    "redirect": "/customer/list",
+    "meta":{
+      "keepAlive": true,
+      "isBack": true
+    },
+    "children": [
+      {
+        "path": "/customer/list",
+        "icon": "key",
+        "title": "客户列表",
+        "name": "customerList",
+        "component": "customer/list",
+        "meta":{
+          "keepAlive": true,
+          "isBack": true
+        }
+      },
+      {
+        "path": "/customer/sys",
+        "icon": "key",
+        "title": "客户支付列表",
+        "name": "customerSys",
+        "component": "customer/pay"
+      },
+      {
+        "path": "/customer/businessStatics",
+        "icon": "key",
+        "title": "业务统计",
+        "name": "businessStatistics",
+        "component": "customer/businessStatistics"
+      }
+    ]
+  },
+  {
+    "path": "/data",
+    "icon": "key",
+    "name": "productVisitDataStatistics",
+    "title": "数据统计",
+    "redirect": "/data/product/list",
+    "children": [
+      {
+        "path": "/data/product/list",
+        "icon": "key",
+        "title": "产品访问数据统计",
+        "name": "dataList",
+        "component": "data/productVisitDataStatistics"
+      },
+      {
+        "path": "/data/charts_product/list",
+        "icon": "key",
+        "title": "产品访问统计图",
+        "name": "charts_product",
+        "component": "data/productVisitStatisticsChart"
+      },
+      {
+        "path": "/data/source/list",
+        "icon": "key",
+        "title": "点击来源数据统计",
+        "name": "sourceList",
+        "component": "data/clickResourceDataStatistics"
+      },
+      {
+        "path": "/data/charts_source/list",
+        "icon": "key",
+        "title": "点击来源统计图",
+        "name": "charts_sourceList",
+        "component": "data/clickResourceStatisticsChart"
+      },
+      {
+        "path": "/data/channel",
+        "icon": "key",
+        "title": "财务统计",
+        "name": "dataChannel",
+        "component": "data/financialStatistics"
+      }
+    ]
+  },
+  {
+    "path": "/config",
+    "icon": "key",
+    "name": "list",
+    "title": "业务配置",
+    "redirect": "/config/show/list",
+    "children": [
+      {
+        "path": "/config/show/list",
+        "icon": "key",
+        "title": "配置参数",
+        "name": "configList",
+        "component": "serviceConfiguration/list"
+      },
+      {
+        "path": "lists",
+        "icon": "key",
+        "title": "配置参数2",
+        "name": "serviceConfigurations",
+        "component": "serviceConfiguration/list"
+      }
+    ]
+  },
+  {
+    "path": "/data",
+    "icon": "key",
+    "name": "list",
+    "title": "报表管理",
+    "redirect": "/data/report/forms",
+    "children": [
+      {
+        "path": "/data/report/forms",
+        "icon": "key",
+        "title": "产品数据报表",
+        "name": "reportForms",
+        "component": "report/list"
+      },
+      {
+        "path": "list1",
+        "icon": "key",
+        "title": "产品数据报表1",
+        "name": "reportList1",
+        "component": "businessManage/list"
+      }
+    ]
+  },
+  {
+    "path": "/businessCustomer",
+    "icon": "key",
+    "name": "list",
+    "title": "商务管理",
+    "redirect": "/businessCustomer/list",
+    "children": [
+      {
+        "path": "/businessCustomer/list",
+        "icon": "key",
+        "title": "商务合作列表",
+        "name": "businessCustomerList",
+        "component": "businessManage/list"
+      },
+      {
+        "path": "tj",
+        "icon": "key",
+        "title": "商务合作列表tj",
+        "name": "businessManagetj",
+        "component": "report/list"
+      }
+    ]
+  },
+  {
+    "path": "/right",
+    "icon": "key",
+    "name": "people",
+    "title": "权限管理",
+    "redirect": "/users/list",
+    "children": [
+      {
+        "path": "/users/list",
+        "icon": "key",
+        "title": "人员管理",
+        "name": "usersList",
+        "component": "rightManage/people"
+      },
+      {
+        "path": "/role/list",
+        "icon": "key",
+        "title": "角色管理",
+        "name": "roleList",
+        "component": "rightManage/role"
+      },
+      {
+        "path": "/meun/list",
+        "icon": "key",
+        "title": "菜单项管理",
+        "name": "meunList",
+        "component": "rightManage/menu"
+      }
+    ]
+  },
+  {
+    "path": "/qudao",
+    "icon": "key",
+    "name": "people",
+    "title": "渠道管理",
+    "redirect": "/qudao/list",
+    "children": [
+      {
+        "path": "/qudao/list",
+        "icon": "key",
+        "title": "渠道注册",
+        "name": "qudaoList",
+        "component": "qudao/qudaoRegister"
+      },
+      {
+        "path": "/qd/sl",
+        "icon": "key",
+        "title": "渠道缩量",
+        "name": "qudaoSl",
+        "component": "qudao/qudaoSL"
+      },
+      {
+        "path": "/qudao/count",
+        "icon": "key",
+        "title": "渠道统计",
+        "name": "qudaoCount",
+        "component": "qudao/qudaoSta"
+      },
+      {
+        "path": "/qudao/channel",
+        "icon": "key",
+        "title": "我的渠道",
+        "name": "qudaoChannel",
+        "component": "qudao/myqudao"
+      }
+    ]
+  },
+  {
+    "path": "/complaint",
+    "icon": "key",
+    "name": "complaint",
+    "title": "客诉模块",
+    "redirect": "/complaint/complaint/list",
+    "meta":{
+      "keepAlive": true,
+      "isBack": true
+    },
+    "children": [
+      {
+        "path": "/complaint/complaint/list",
+        "icon": "key",
+        "title": "客户列表",
+        "name": "complaintList",
+        "component": "complaint/customer",
+        "meta":{
+          "keepAlive": true,
+          "isBack": true
+        }
+      },
+      {
+        "path": "/complaint/my_complaint/list",
+        "icon": "key",
+        "title": "我的客户列表",
+        "name": "my_complaintList",
+        "component": "complaint/myCustomer",
+        "meta":{
+          "keepAlive": true,
+          "isBack": true
+        }
+      },
+      {
+        "path": "/complaint/reback/list",
+        "icon": "key",
+        "title": "退款列表",
+        "name": "rebackList",
+        "component": "complaint/reback",
+        "meta":{
+          "keepAlive": true,
+          "isBack": true
+        }
+      },
+      {
+        "path": "/complaint/reback/listStatistics",
+        "icon": "key",
+        "title": "客服业绩统计",
+        "name": "listStatistics",
+        "component": "complaint/archievementSta"
+      },
+      {
+        "path": "/complaint/email/list",
+        "icon": "key",
+        "title": "邮件退款列表",
+        "name": "emailList",
+        "component": "complaint/emailReback",
+        "meta":{
+          "keepAlive": true,
+          "isBack": true
+        }
+      },
+      {
+        "path": "/complaint/member/list",
+        "icon": "key",
+        "title": "会员列表",
+        "name": "memberList",
+        "component": "complaint/memberList",
+        "meta":{
+          "keepAlive": true,
+          "isBack": true
+        }
+      }
+    ]
+  }
+]
